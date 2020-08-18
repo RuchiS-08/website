@@ -146,7 +146,9 @@
                     <input
                       type="text"
                       class="form-control"
+                      id="name"
                       placeholder="Your Name"
+                      onchange="onChange()"
                     />
                   </div>
                 </div>
@@ -155,30 +157,41 @@
                     <input
                       type="text"
                       class="form-control"
+                      id="email"
                       placeholder="Your Email"
+                      onchange="onChange()"
                     />
                   </div>
                 </div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject" />
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Subject"
+                  id="subject"
+                  onchange="onChange()"
+                />
               </div>
               <div class="form-group">
                 <textarea
                   name=""
-                  id=""
+                  id="msg"
                   cols="30"
                   rows="7"
                   class="form-control"
                   placeholder="Message"
+                  onchange="onChange()"
                 ></textarea>
               </div>
               <div class="form-group">
-                <input
-                  type="submit"
-                  value="Send Message"
+                <a
+                  id="mail"
+                  href="mailto:ayurvedalifestylepune@gmail.com"
                   class="btn btn-primary py-3 px-5"
-                />
+                >
+                  Message</a
+                >
               </div>
             </form>
           </div>
@@ -187,8 +200,9 @@
     </section>
 
     <footer class="ftco-footer ftco-section img">
-<a href="tel:+918605506006" class="float"><img src="images/call1.png" style="padding:15px;">
-</a>
+      <a href="tel:+918605506006" class="float"
+        ><img src="images/call1.png" style="padding: 15px;" />
+      </a>
       <div class="overlay"></div>
       <div class="container">
         <div class="row mb-5">
@@ -284,7 +298,29 @@
         />
       </svg>
     </div>
-
+    <script>
+      let name = "";
+      let email = "";
+      let subject = "";
+      let msg = "";
+      function onChange() {
+        nm = document.getElementById("name").value;
+        email = document.getElementById("email").value;
+        subject = document.getElementById("subject").value;
+        msg = document.getElementById("msg").value;
+        document.getElementById("mail").href =
+          "mailto:ayurvedalifestylepune@gmail.com?" +
+          "subject=" +
+          subject +
+          "&" +
+          "body=name" +
+          nm +
+          "email" +
+          email +
+          "msg" +
+          msg;
+      }
+    </script>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <script src="js/popper.min.js"></script>

@@ -284,14 +284,18 @@
                   <input
                     type="text"
                     class="form-control"
+                    id="f_name"
                     placeholder="First Name"
+                    onchange="onChange()"
                   />
                 </div>
                 <div class="col-md-6">
                   <input
                     type="text"
                     class="form-control"
+                    id="l_name"
                     placeholder="Last Name"
+                    onchange="onChange()"
                   />
                 </div>
               </div>
@@ -303,32 +307,42 @@
                     </div>
                     <input
                       type="text"
-                      id="appointment_date"
+                      id="date"
                       class="form-control"
                       placeholder="Date"
+                      onchange="onChange()"
                     />
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <input type="text" class="form-control" placeholder="Phone" />
+                  <input
+                    id="phone"
+                    type="text"
+                    class="form-control"
+                    placeholder="Phone"
+                    onchange="onChange()"
+                  />
                 </div>
               </div>
               <div class="form-group">
                 <textarea
                   name=""
-                  id=""
+                  id="msg"
                   cols="30"
                   rows="3"
                   class="form-control"
                   placeholder="Message"
+                  onchange="onChange()"
                 ></textarea>
               </div>
               <div class="form-group">
-                <input
-                  type="submit"
-                  value="Order"
+                <a
+                  id="mail"
+                  href="mailto:ayurvedalifestylepune@gmail.com"
                   class="btn btn-white btn-outline-white py-3 px-4"
-                />
+                >
+                  Book Now
+                </a>
               </div>
             </form>
           </div>
@@ -435,7 +449,33 @@
         />
       </svg>
     </div>
-
+    <script>
+      let fName = "";
+      let lName = "";
+      let date = "";
+      let phone = "";
+      let msg = "";
+      function onChange() {
+        fName = document.getElementById("f_name").value;
+        lName = document.getElementById("l_name").value;
+        date = document.getElementById("date").value;
+        phone = document.getElementById("phone").value;
+        msg = document.getElementById("msg").value;
+        document.getElementById("mail").href =
+          "mailto:ayurvedalifestylepune@gmail.com?" +
+          "subject=" +
+          fName +
+          "_" +
+          lName +
+          "_" +
+          date +
+          "&" +
+          "body=phone" +
+          phone +
+          "msg" +
+          msg;
+      }
+    </script>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <script src="js/popper.min.js"></script>
