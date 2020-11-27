@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/icomoon.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
   </head>
   <body>
     <div
@@ -50,7 +51,7 @@
             <div class="icon">
               <a href="index.html" class="logo">
                 <span class="flaticon-flower"></span>
-                <h1>Ayuverda lifestyle</h1>
+                <h1>Ayurveda lifestyle</h1>
               </a>
             </div>
             <h1
@@ -78,7 +79,7 @@
       id="ftco-navbar"
     >
       <div class="container">
-        <a class="navbar-brand" href="index.html">Ayuverda lifestyle</a>
+        <a class="navbar-brand" href="index.html">Ayurveda lifestyle</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -265,8 +266,16 @@
                 <p class="day">
                   <a href="tel:+918605506006"
                     ><span class="icon icon-phone"></span
-                    ><span class="text"> +91 8605506006</span></a
+                    ><span class="text"> +91 860550600</span> 
+                     </a
                   >
+                  <br>
+                  <a href="tel:+919021753029"
+                    ><span class="icon icon-phone"></span
+                    ><span class="text"> +91 9021753029</span>
+                     </a
+                  >
+                  
                 </p>
               </div>
               <div>
@@ -278,7 +287,8 @@
           </div>
           <div class="col-md-6 appointment pl-md-5 ftco-animate">
             <h3 class="mb-3">Appointments</h3>
-            <form action="#" class="appointment-form">
+            <!-- Form Contact us -->
+            <form action="https://send.pageclip.co/YeDpvOU174bsRp36iCFePpTg7uyaqE5Q" class="pageclip-form appointment-form" method="post"> 
               <div class="row form-group d-flex">
                 <div class="col-md-6">
                   <input
@@ -286,7 +296,8 @@
                     class="form-control"
                     id="f_name"
                     placeholder="First Name"
-                    onchange="onChange()"
+                    name="first-name"
+                    required
                   />
                 </div>
                 <div class="col-md-6">
@@ -295,7 +306,8 @@
                     class="form-control"
                     id="l_name"
                     placeholder="Last Name"
-                    onchange="onChange()"
+                    name="last-name"
+                    required
                   />
                 </div>
               </div>
@@ -310,7 +322,7 @@
                       id="date"
                       class="form-control"
                       placeholder="Date"
-                      onchange="onChange()"
+                      name="date"
                     />
                   </div>
                 </div>
@@ -320,7 +332,8 @@
                     type="text"
                     class="form-control"
                     placeholder="Phone"
-                    onchange="onChange()"
+                    name="phone"
+                    required
                   />
                 </div>
               </div>
@@ -332,17 +345,15 @@
                   rows="3"
                   class="form-control"
                   placeholder="Message"
-                  onchange="onChange()"
+                  name="message"
+                  required
                 ></textarea>
               </div>
               <div class="form-group">
-                <a
-                  id="mail"
-                  href="mailto:ayurvedalifestylepune@gmail.com"
-                  class="btn btn-white btn-outline-white py-3 px-4"
-                >
-                  Book Now
-                </a>
+               
+                <button type="submit" class="pageclip-form__submit btn btn-white btn-outline-white py-3 px-4">
+                  <span>Send</span>
+                </button>
               </div>
             </form>
           </div>
@@ -399,6 +410,13 @@
                     >
                   </li>
                   <li>
+                    <a href="tel:+919021753029"
+                    ><span class="icon icon-phone"></span
+                    ><span class="text"> +91 9021753029</span>
+                     </a
+                  >
+                  </li>
+                  <li>
                     <a href="mailto:ayurvedalifestylepune@gmail.com"
                       ><span class="icon icon-envelope"></span
                       ><span class="text"
@@ -449,33 +467,7 @@
         />
       </svg>
     </div>
-    <script>
-      let fName = "";
-      let lName = "";
-      let date = "";
-      let phone = "";
-      let msg = "";
-      function onChange() {
-        fName = document.getElementById("f_name").value;
-        lName = document.getElementById("l_name").value;
-        date = document.getElementById("date").value;
-        phone = document.getElementById("phone").value;
-        msg = document.getElementById("msg").value;
-        document.getElementById("mail").href =
-          "mailto:ayurvedalifestylepune@gmail.com?" +
-          "subject=" +
-          fName +
-          "_" +
-          lName +
-          "_" +
-          date +
-          "&" +
-          "body=phone" +
-          phone +
-          "msg" +
-          msg;
-      }
-    </script>
+   
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -493,5 +485,6 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
   </body>
 </html>
